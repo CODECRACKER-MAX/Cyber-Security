@@ -23,7 +23,7 @@ for x in range(19, 25):
     Scan(x)
 '''
 
-threads = [threading.Thread(target=Scan, args = (n,)) for n in range(1,65537)]
+threads = [threading.Thread(target=Scan, args = (n,)) for n in range(1,65536)]
 [t.start() for t in threads]
 [t.join() for t in threads]
 
